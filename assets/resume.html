@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>杨友超 - 前端项目负责人</title>
+  <meta name="description" content="杨友超的个人简历：前端项目负责人、AI 应用、多端架构与 0-1 交付。">
+  <link rel="icon" href="./images/logo.ico" type="image/x-icon">
+  <style>
+    :root {
+      --ink: #282725;
+      --body: #4d4b46;
+      --muted: #746f65;
+      --line: #e7e3dc;
+      --accent: #87642d;
+      --accent-soft: #f8f3e8;
+      --warm: #b89150;
+      --paper: #fff;
+      --canvas: #f3f1ed;
+    }
+
+    * { box-sizing: border-box; }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--warm); outline-offset: 4px; }
+    button { font: inherit; }
+
+    .skip-link { position: fixed; top: 10px; left: 16px; z-index: 30; padding: 10px 16px; background: var(--paper); border: 1px solid var(--accent); border-radius: 8px; transform: translateY(-160%); }
+    .skip-link:focus { transform: translateY(0); }
+    .resume-toolbar { position: sticky; top: 0; z-index: 10; background: #faf9f6; border-bottom: 1px solid var(--line); }
+    .toolbar-inner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 24px; max-width: 1100px; margin: 0 auto; padding: 14px 24px; }
+    .portfolio-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+    .resume-nav { display: flex; justify-content: center; gap: 8px; }
+    .resume-nav a { padding: 7px 14px; border-radius: 8px; font-size: 13px; white-space: nowrap; }
+    .resume-nav a:hover, .resume-nav a:focus-visible { background: var(--accent-soft); color: var(--accent); }
+    .print-button { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 8px 16px; border: 1px solid #cdb98d; border-radius: 9px; background: var(--accent-soft); color: var(--accent); cursor: pointer; font-size: 13px; font-weight: 650; white-space: nowrap; }
+    .print-button:hover { background: #efe4cd; border-color: var(--warm); }
+    .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: 11px; font-weight: 650; letter-spacing: 2px; }
+    .profile-avatar { grid-column: 2; grid-row: 1 / span 2; align-self: start; width: 64px; height: 64px; margin: 0; border-radius: 12px; overflow: hidden; background: #fff; }
+    .profile-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    html { background: var(--canvas); }
+
+    body {
+      margin: 0;
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 18px auto;
+      padding: 13mm 15mm 19mm;
+      position: relative;
+      background: var(--paper);
+      box-shadow: 0 10px 34px rgba(32, 50, 57, .12);
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 64px;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 28pt;
+      line-height: 1.1;
+      font-weight: 750;
+    }
+
+    .headline {
+      margin-top: 8px;
+      color: var(--accent);
+      font-size: 11pt;
+      font-weight: 650;
+    }
+
+    .contact {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 4px 18px;
+      justify-items: start;
+      color: var(--muted);
+      font-size: 9pt;
+    }
+
+    .contact span { white-space: nowrap; }
+    .contact strong { color: var(--ink); font-weight: 600; }
+
+    section { margin-top: 15px; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 9px;
+      color: var(--ink);
+      font-size: 13pt;
+      line-height: 1.2;
+      font-weight: 720;
+    }
+
+    .section-title::before {
+      width: 4px;
+      height: 14px;
+      content: "";
+      background: var(--accent);
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 8.5pt;
+      font-weight: 400;
+    }
+
+    .summary {
+      margin: 0;
+      padding: 10px 13px;
+      border-left: 2px solid var(--warm);
+      background: #f7f9f8;
+      color: #34494f;
+      font-size: 9.5pt;
+      line-height: 1.65;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .skill {
+      min-height: 60px;
+      padding: 8px 10px 7px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill h3 {
+      margin: 0 0 3px;
+      color: var(--accent);
+      font-size: 9pt;
+      font-weight: 700;
+    }
+
+    .skill p { margin: 0; font-size: 8.7pt; line-height: 1.5; }
+
+    .responsibility {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .responsibility div { padding-left: 8px; border-left: 2px solid var(--line); }
+    .responsibility strong { display: block; color: var(--ink); font-size: 8.8pt; }
+    .responsibility p { margin: 3px 0 0; font-size: 8.4pt; line-height: 1.5; }
+
+    .jobs { border-top: 1px solid var(--line); }
+
+    .job {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    .job-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 13px; color: var(--muted); font-size: 8.5pt; }
+    .job-meta time { margin-left: auto; color: var(--accent); font-weight: 650; }
+    .job-meta strong { color: var(--ink); font-size: 10pt; }
+    .job-copy p { margin: 6px 0 0; font-size: 8.9pt; line-height: 1.5; }
+    .job-copy p + p { margin-top: 3px; }
+    .job-copy strong { color: var(--ink); font-weight: 650; }
+
+    .job-timeline { margin: 7px 0 0; padding: 0; list-style: none; }
+    .job-timeline li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 9px; padding: 4px 0 4px 9px; border-left: 2px solid var(--accent); font-size: 8.5pt; }
+    .job-timeline time { color: var(--muted); white-space: nowrap; }
+    .job-timeline strong { color: var(--ink); font-weight: 650; }
+
+    .stage-case { margin-top: 11px; padding: 10px 12px; border: 1px solid var(--line); background: #f7f9f8; break-inside: avoid; }
+    .stage-case h3 { margin: 0; color: var(--ink); font-size: 10pt; }
+    .stage-case p { margin: 5px 0 0; font-size: 8.8pt; line-height: 1.5; }
+    .stage-case p strong { color: var(--ink); }
+
+    .education {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 14px;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 9pt;
+    }
+
+    .education strong { color: var(--ink); }
+    .education span:last-child { color: var(--muted); }
+
+    .project-list { border-top: 1px solid var(--line); }
+
+    .project {
+      position: relative;
+      margin-top: 0;
+      padding: 10px 0 9px 13px;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    .project::before {
+      position: absolute;
+      top: 15px;
+      bottom: 14px;
+      left: 0;
+      width: 2px;
+      content: "";
+      background: var(--accent);
+    }
+
+    .project-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .project h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 10.6pt;
+      line-height: 1.3;
+      font-weight: 720;
+    }
+
+    .project-type { margin-top: 4px; color: var(--accent); font-size: 8pt; font-weight: 650; }
+    .project time { color: var(--muted); font-size: 8.5pt; white-space: nowrap; }
+    .project p { margin: 5px 0 0; font-size: 8.8pt; line-height: 1.5; }
+    .project p strong { color: var(--ink); font-weight: 650; }
+
+    .project-compact { padding-top: 9px; padding-bottom: 8px; }
+    .project-compact::before { top: 13px; bottom: 12px; }
+    .project-compact p { margin-top: 3px; }
+
+    .page-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+    .page-heading h2 { margin: 0; color: var(--ink); font-size: 16pt; font-weight: 730; }
+    .page-heading span { color: var(--accent); font-size: 8.5pt; }
+    .page-intro { margin: 8px 0 10px; font-size: 8.7pt; line-height: 1.5; }
+
+    .flagship .project { padding-top: 5px; padding-bottom: 5px; }
+    .flagship .project h3 { font-size: 10.2pt; }
+    .flagship .project p { margin-top: 4px; font-size: 8.4pt; line-height: 1.45; }
+    .flagship .project-type { font-size: 7.6pt; }
+
+    .matrix-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 15px; }
+    .matrix { width: 100%; border-collapse: collapse; font-size: 8pt; line-height: 1.35; }
+    .matrix caption { text-align: left; padding-bottom: 5px; color: var(--accent); font-weight: 650; }
+    .matrix th, .matrix td { padding: 4px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+    .matrix th { color: var(--muted); font-size: 7.5pt; font-weight: 500; }
+    .matrix td:first-child { width: 50%; padding-right: 9px; color: var(--ink); font-weight: 600; }
+    .matrix td small { display: block; font-size: 7.3pt; color: var(--muted); font-weight: 400; }
+    .matrix-tools { margin: 7px 0 0; padding: 4px 9px; border-left: 2px solid var(--accent); background: #f7f9f8; color: var(--body); font-size: 8pt; line-height: 1.4; }
+    .matrix-tools strong { color: var(--ink); }
+
+    .result-line { margin: 8px 0 0; padding: 7px 10px; border-left: 2px solid var(--warm); background: #f9f6f3; color: var(--ink); font-size: 8.6pt; }
+    .education-section { margin-top: 18px; }
+    .contact-bottom { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; font-size: 8.5pt; color: var(--muted); }
+    .contact-bottom strong { color: var(--ink); }
+
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 10mm;
+      left: 15mm;
+      right: 15mm;
+      color: #9aa7a8;
+      font-size: 7.5pt;
+    }
+
+    @page { size: A4; margin: 0; }
+
+    @media print {
+      html, body { width: 210mm; margin: 0; background: #fff; }
+      body { font-size: 9.5pt; }
+      .resume-toolbar, .skip-link, .eyebrow { display: none; }
+      .profile-avatar { grid-row: 1; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 0;
+        margin: 0;
+        padding: 12mm 15mm 18mm;
+        box-shadow: none;
+        page-break-after: always;
+      }
+      .page:last-child { page-break-after: auto; }
+      .stage-case time { color: var(--muted); font-size: 8.5pt; white-space: nowrap; }
+      a { color: inherit; text-decoration: none; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+
+    @media screen {
+      html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+      body { font-size: 15px; line-height: 1.8; }
+      main { width: min(1060px, calc(100% - 48px)); margin: 32px auto 48px; }
+      .page { width: 100%; min-height: 0; margin: 0 0 28px; padding: 42px 48px 30px; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 8px 32px rgba(51, 44, 32, .04); scroll-margin-top: 0; }
+      .masthead { grid-template-columns: minmax(0, 1fr) 120px; gap: 16px 24px; padding-bottom: 26px; border-bottom: 1px solid #d3c4a7; }
+      h1 { font-size: 44px; line-height: 1.15; letter-spacing: 1px; }
+      .headline { margin-top: 12px; font-size: 15px; line-height: 1.7; font-weight: 600; }
+      .profile-avatar { grid-row: 1; width: 120px; height: 120px; border: 1px solid var(--line); border-radius: 20px; }
+      .contact { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: 0; font-size: 13px; }
+      .contact span { white-space: normal; }
+      .contact a, .contact-bottom a { overflow-wrap: anywhere; }
+      .contact a:hover, .contact-bottom a:hover { text-decoration: underline; text-underline-offset: 4px; }
+      section { margin-top: 28px; }
+      .section-title { align-items: baseline; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 16px; font-size: 20px; line-height: 1.5; }
+      .section-title::before { flex: 0 0 4px; align-self: center; height: 18px; border-radius: 2px; }
+      .section-note { color: var(--muted); font-size: 12px; line-height: 1.6; }
+      .summary { padding: 17px 20px; border-left: 3px solid var(--warm); border-radius: 0 12px 12px 0; background: var(--accent-soft); color: var(--body); font-size: 15px; line-height: 1.85; }
+      .responsibility { gap: 12px; margin-top: 16px; }
+      .responsibility div { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fcfbf9; }
+      .responsibility strong { font-size: 14px; line-height: 1.6; }
+      .responsibility p { margin-top: 7px; font-size: 13px; line-height: 1.8; }
+      .skills { gap: 12px; border: 0; }
+      .skill { min-width: 0; min-height: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; }
+      .skill h3 { margin-bottom: 8px; font-size: 15px; line-height: 1.6; }
+      .skill p { font-size: 14px; line-height: 1.85; overflow-wrap: anywhere; }
+      .jobs { display: grid; gap: 16px; border: 0; }
+      .job { padding: 20px; border: 1px solid var(--line); border-radius: 14px; }
+      .job-meta { gap: 8px 14px; font-size: 12px; line-height: 1.7; }
+      .job-meta strong { font-size: 17px; line-height: 1.6; }
+      .job-meta > span { padding: 2px 8px; border-radius: 5px; background: var(--accent-soft); color: var(--accent); }
+      .job-meta time { font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .job-copy p, .job-copy p + p { margin-top: 12px; font-size: 14px; line-height: 1.85; }
+      .job-timeline { margin-top: 14px; }
+      .job-timeline li { position: relative; grid-template-columns: 132px minmax(0, 1fr); gap: 12px; padding: 8px 0 8px 15px; border-left: 1px solid #d3c4a7; font-size: 13px; line-height: 1.8; }
+      .job-timeline li::before { position: absolute; left: -4px; top: 16px; width: 7px; height: 7px; border-radius: 50%; background: var(--warm); content: ""; }
+      .job-timeline time { font-size: 12px; font-variant-numeric: tabular-nums; }
+      .stage-case { margin-top: 20px; padding: 20px; border: 1px solid #dfd2b8; border-radius: 14px; background: #fcfaf5; }
+      .stage-case h3 { font-size: 16px; line-height: 1.6; }
+      .stage-case time { color: var(--muted); font-size: 12px; white-space: nowrap; }
+      .stage-case p { margin-top: 10px; font-size: 14px; line-height: 1.85; }
+      .page-heading { flex-wrap: wrap; align-items: center; gap: 10px 20px; padding-bottom: 22px; border-bottom: 1px solid #d3c4a7; }
+      .page-heading h2 { font-size: 26px; line-height: 1.5; }
+      .page-heading span { padding: 4px 10px; border-radius: 6px; background: var(--accent-soft); font-size: 12px; line-height: 1.6; white-space: nowrap; }
+      .page-intro { margin: 18px 0 0; font-size: 14px; line-height: 1.85; }
+      .project-list { display: grid; gap: 16px; margin-top: 24px; border: 0; }
+      .project, .flagship .project { margin-top: 0; padding: 20px 22px; border: 1px solid var(--line); border-left: 3px solid var(--warm); border-radius: 0 14px 14px 0; }
+      .project::before { display: none; }
+      .project-head { align-items: baseline; gap: 8px 20px; }
+      .project h3, .flagship .project h3 { font-size: 17px; line-height: 1.6; }
+      .project time { font-size: 12px; font-variant-numeric: tabular-nums; }
+      .project-type, .flagship .project-type { margin-top: 12px; padding: 7px 10px; border-radius: 7px; background: var(--accent-soft); color: var(--accent); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+      .project p, .flagship .project p { margin-top: 11px; font-size: 14px; line-height: 1.85; }
+      .matrix-grid { gap: 20px; }
+      .matrix { border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 12px 12px; font-size: 13px; line-height: 1.8; }
+      .matrix caption { padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px 12px 0 0; background: #f7f5ef; color: var(--ink); font-size: 14px; line-height: 1.7; }
+      .matrix th, .matrix td { padding: 12px; }
+      .matrix th { background: #fcfbf8; font-size: 12px; line-height: 1.6; }
+      .matrix td:first-child { width: 44%; padding-right: 12px; font-size: 13px; line-height: 1.7; }
+      .matrix tbody tr:last-child td { border-bottom: 0; }
+      .matrix td small { margin-top: 6px; font-size: 11.5px; line-height: 1.8; }
+      .matrix-tools { margin-top: 16px; padding: 13px 16px; border-left: 3px solid var(--warm); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 13px; line-height: 1.8; }
+      .result-line { margin-top: 20px; padding: 15px 18px; border-left: 3px solid var(--warm); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; line-height: 1.8; }
+      .education-section { margin-top: 28px; }
+      .education { grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px 20px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; line-height: 1.8; }
+      .contact-bottom { gap: 8px 24px; margin-top: 24px; font-size: 13px; line-height: 1.8; }
+      .page-footer { position: static; gap: 12px; margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+    }
+
+    @media screen and (max-width: 900px) {
+      main { width: calc(100% - 32px); margin-top: 24px; }
+      .page { padding: 30px; }
+      .responsibility, .matrix-grid { grid-template-columns: minmax(0, 1fr); }
+      .responsibility { gap: 10px; }
+      .responsibility div { padding: 14px 16px; }
+      .job-meta time { margin-left: 0; }
+    }
+
+    @media screen and (max-width: 640px) {
+      html { scroll-padding-top: 112px; }
+      .toolbar-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; padding: 10px 16px; }
+      .portfolio-link { font-size: 12px; }
+      .print-button { min-height: 34px; padding: 6px 12px; font-size: 12px; }
+      .resume-nav { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+      .resume-nav a { padding: 5px; text-align: center; font-size: 12px; }
+      main { width: calc(100% - 20px); margin: 16px auto 24px; }
+      .page { margin-bottom: 16px; padding: 24px 20px; border-radius: 14px; scroll-margin-top: 0; }
+      .masthead { grid-template-columns: minmax(0, 1fr) 80px; gap: 14px 16px; padding-bottom: 20px; }
+      h1 { font-size: 34px; }
+      .eyebrow { margin-bottom: 8px; font-size: 10px; }
+      .headline { margin-top: 10px; font-size: 13px; line-height: 1.8; }
+      .profile-avatar { grid-row: 1; width: 80px; height: 80px; border-radius: 14px; }
+      .contact { display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px; font-size: 13px; }
+      section { margin-top: 24px; }
+      .section-title { margin-bottom: 13px; font-size: 19px; }
+      .section-note { flex-basis: calc(100% - 14px); margin-left: 14px; }
+      .summary { padding: 14px 16px; font-size: 14px; }
+      .skills { grid-template-columns: minmax(0, 1fr); }
+      .skill { padding: 16px; }
+      .skill h3 { font-size: 14px; }
+      .responsibility strong { font-size: 14px; }
+      .job { padding: 16px; }
+      .job-meta { gap: 6px 10px; }
+      .job-meta strong { flex-basis: 100%; font-size: 16px; }
+      .job-timeline li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+      .stage-case { padding: 16px; }
+      .project-head { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+      .page-heading { align-items: flex-start; padding-bottom: 18px; }
+      .page-heading h2 { font-size: 23px; }
+      .page-heading span { white-space: normal; }
+      .project-list { gap: 14px; margin-top: 20px; }
+      .project, .flagship .project { padding: 16px; }
+      .project h3, .flagship .project h3 { font-size: 16px; }
+      .project-type, .flagship .project-type { padding: 7px 9px; font-size: 11.5px; }
+      .matrix-grid { gap: 18px; }
+      .matrix th, .matrix td { padding: 10px; }
+      .matrix td:first-child { padding-right: 10px; }
+      .matrix td small { font-size: 11px; }
+      .matrix-tools, .result-line { padding: 13px 15px; }
+      .education { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 16px; }
+      .education span:last-child { font-size: 12px; }
+      .contact-bottom { display: grid; gap: 5px; }
+      .page-footer { margin-top: 24px; font-size: 10px; }
+    }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#resume-content">跳到简历正文</a>
+  <div class="resume-toolbar">
+    <div class="toolbar-inner">
+      <a class="portfolio-link" href="../index.html"><span aria-hidden="true">←</span> 返回作品集</a>
+      <nav class="resume-nav" aria-label="简历内容导航">
+        <a href="#resume-overview">简历概览</a>
+        <a href="#resume-projects">自研项目</a>
+        <a href="#resume-saas">行业项目</a>
+      </nav>
+      <button class="print-button" type="button" data-print>打印 / 保存 PDF</button>
+    </div>
+  </div>
+  <main id="resume-content">
+    <article class="page" id="resume-overview" aria-label="杨友超简历第一页">
+      <header class="masthead">
+        <div class="profile-heading">
+          <p class="eyebrow">个人简历</p>
+          <h1>杨友超</h1>
+          <div class="headline">前端项目负责人 <span aria-hidden="true">·</span> AI 应用 <span aria-hidden="true">·</span> 多端架构与 0-1 交付</div>
+        </div>
+        <figure class="profile-avatar">
+          <img src="./images/my-profile-optimized-240.webp" srcset="./images/my-profile-optimized-80.webp 80w, ./images/my-profile-optimized-160.webp 160w, ./images/my-profile-optimized-240.webp 240w, ./images/my-profile-optimized-360.webp 360w" sizes="(max-width: 640px) 80px, 120px" alt="杨友超" width="120" height="120">
+        </figure>
+        <div class="contact" aria-label="联系方式与求职意向">
+          <span><strong>电话</strong>　<a href="tel:18336261273">18336261273</a></span>
+          <span><strong>邮箱</strong>　<a href="mailto:skill199911@163.com">skill199911@163.com</a></span>
+          <span><strong>期望城市</strong>　杭州</span>
+        </div>
+      </header>
+
+      <section aria-labelledby="profile-title">
+        <h2 class="section-title" id="profile-title">个人优势</h2>
+        <p class="summary">负责多款自研产品的前端架构、核心开发与交付推进，经历覆盖 AI 招聘、灵工协作、数字人视频创作及门店 SaaS。能够从 0-1 需求拆解、技术选型、基础架构建设，一路跟进接口联调、多端发布和持续迭代；将 AI 对话、语音、企业知识库和智能体结果接入实际业务流程。</p>
+        <div class="responsibility" aria-label="项目负责人能力">
+          <div><strong>架构与核心开发</strong><p>划分产品与模块边界，统一认证、状态、缓存和组件，负责关键业务链路。</p></div>
+          <div><strong>研发推进与交付</strong><p>协同产品、设计和后端，跟进接口契约、联调问题、跨端适配与版本发布。</p></div>
+          <div><strong>AI 与工程沉淀</strong><p>建设 AI 接入、企业知识库交互与 Skill 工作流，将经验沉淀为可复用能力。</p></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="skills-title">
+        <h2 class="section-title" id="skills-title">技术能力</h2>
+        <div class="skills">
+          <div class="skill">
+            <h3>AI API 中转与流式交互</h3>
+            <p>Docker Compose 部署、OpenAI / Anthropic 兼容接入、上游账号与 API Key 分组、健康检查；SSE 事件归一化、业务错误处理、会话恢复与结果回放。</p>
+          </div>
+          <div class="skill">
+            <h3>企业知识库与 AI 应用</h3>
+            <p>知识库文本编辑与文件上传、异步解析结果接入、人设上下文；AI 招聘助手、能力访谈、语音输入、智能匹配和结构化结果回填。</p>
+          </div>
+          <div class="skill">
+            <h3>AI Skill 库与研发工作流</h3>
+            <p>Skill 注册与自然语言路由、项目配置、运行时输入、凭据与本地状态隔离；Bugbook 问题复用、多端打包发布和文档流程。</p>
+          </div>
+          <div class="skill">
+            <h3>前端架构与多端交付</h3>
+            <p>Vue 2 / 3、TypeScript、Pinia、Vite、Nuxt、uni-app、Element Plus、uView Plus；微信小程序、H5、App-Plus、SSR、Android / iOS 构建与发布。</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">工作经历</h2>
+        <div class="jobs">
+          <div class="job">
+            <div class="job-meta"><strong>杭州青麟栖云科技有限公司</strong><span>前端项目负责人</span><time>2025.11-至今</time></div>
+            <div class="job-copy">
+              <p>负责数字人创作与 WiseMatch 多产品的前端技术选型、架构设计、核心开发和交付跟进，覆盖 Web、小程序、H5、App-Plus 与 SSR。主导跨项目基础能力收敛，协同后端与算法团队推进 AI 应用联调，同时建设 AI API 中转和AI Skill 工作流。</p>
+            </div>
+            <ol class="job-timeline" aria-label="青麟阶段项目时间线">
+              <li><time>2026.02-至今</time><div><strong>WiseMatch 多端生态与 AI 应用</strong>：灵工、招聘、校园及研发平台的前端架构与交付。</div></li>
+              <li><time>2025.11-2026.02</time><div><strong>光子纪元 · 互映 AI 数字人视频创作平台</strong>：创作端、管理端与多端官网建设。</div></li>
+            </ol>
+          </div>
+          <div class="job">
+            <div class="job-meta"><strong>杭州非球互联网科技有限公司</strong><span>前端项目负责人</span><time>2022.10-2025.11</time></div>
+            <div class="job-copy"><p>负责球房门店数字化产品的前端架构与持续交付，建设管理、消费者、收银、运营后台和客服端。围绕门店、订单、商品、会员与支付划分业务模块，负责公共能力封装、核心开发、前后端联调与多端发布跟进。</p></div>
+            <ol class="job-timeline" aria-label="非球阶段项目时间线">
+              <li><time>2024.08-2025.11</time><div><strong>台满满球房门店数字化平台</strong>：门店经营、收银、库存、会员与用户服务。</div></li>
+              <li><time>2022.10-2024.07</time><div><strong>非球 SaaS 与多端球房管理平台</strong>：收银 SaaS、管理后台及管理 / 用户小程序。</div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage-case" aria-labelledby="digital-title">
+        <div class="project-head"><h3 id="digital-title">光子纪元 · 互映 AI 数字人视频创作平台</h3><time>2025.11-2026.02</time></div>
+        <p><strong>架构与交付：</strong>负责 4 个前端应用的技术选型、Monorepo 与构建规范，覆盖素材管理、声音克隆、文本 / 音频创作、视频任务追踪及会员算力业务，完成 32 个后台业务模块。</p>
+        <p><strong>性能与部署：</strong>以 IndexedDB 多级缓存、代码分割和懒加载优化视频 / 图片场景；网络请求量约减少 50%，首屏加载时间约缩短 40%。支持 3 个品牌独立部署，完成 Nuxt 4 SSR / SEO 改造。</p>
+      </section>
+
+      <footer class="page-footer"><span>杨友超 · 前端项目负责人</span><span>01 / 03</span></footer>
+    </article>
+
+    <article class="page" id="resume-projects" aria-label="杨友超简历第二页">
+      <header class="page-heading"><h2>WiseMatch 产品与 AI 应用</h2><span>青麟阶段 · 2026.02-至今</span></header>
+
+      <div class="project-list flagship">
+        <section class="project" aria-labelledby="project-wisematch-c">
+          <div class="project-head">
+            <h3 id="project-wisematch-c">01　轻灵多端架构与灵工协作平台</h3>
+            <time>2026.02-至今</time>
+          </div>
+          <div class="project-type">自研产品 · Web / 小程序 / App-Plus / 管理端 · Vue 3 / React / TypeScript</div>
+          <p><strong>目标与架构：</strong>负责个人、企业与运营端的技术选型和前端架构；从 0-1 划分资料、任务、匹配、会话和交付模块，建设认证、缓存、路由、状态及公共组件。</p>
+          <p><strong>推进与落地：</strong>主导核心研发、接口契约、跨团队联调与多端发布，跟进构建、线上问题和持续迭代；接入 AI 建档、口述服务 / 案例及语义匹配，贯通实际业务流程。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-wisematch-ai">
+          <div class="project-head">
+            <h3 id="project-wisematch-ai">02　AI 招聘助手、AI 人设与企业知识库</h3>
+            <time>2026.02-至今</time>
+          </div>
+          <div class="project-type">自研产品 · Web / 小程序 / 管理端 · SSE / OSS 文件接入</div>
+          <p><strong>目标与架构：</strong>将招聘助手、人设与企业知识接入岗位、人才和简历工作流；主导会话、角色配置、知识库文本编辑与文件上传组件，划分业务数据和流式消息状态。</p>
+          <p><strong>推进与落地：</strong>联调文件异步解析、内容总结与人设上下文接入，处理历史消息、失败恢复和结果回填；串联企业知识维护、人设配置与 AI 招聘交互。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-interview">
+          <div class="project-head">
+            <h3 id="project-interview">03　AI 能力访谈、语音面试与 RTC 视频面试</h3>
+            <time>2026.02-至今</time>
+          </div>
+          <div class="project-type">多模态应用 · Web / 小程序 / Android / iOS · ASR / SSE / RTC</div>
+          <p><strong>目标与架构：</strong>负责能力访谈、模拟面试、报告及语音 / 视频交互，设计访谈状态、录音输入、流式回复和结果确认链路，对接 Agent 与音视频服务。</p>
+          <p><strong>推进与落地：</strong>跟进权限、语音识别、字幕及异常恢复，处理原生视频层、全屏布局与安全区；推进多端构建发布，使访谈结果接入资料、能力和面试报告。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-relay">
+          <div class="project-head">
+            <h3 id="project-relay">04　AI API 中转与统一模型接入平台</h3>
+            <time>2026.02-至今</time>
+          </div>
+          <div class="project-type">团队 AI 基础设施 · Docker Compose / OpenAI / Anthropic 兼容接口</div>
+          <p><strong>目标与建设：</strong>基于现有中转服务建设团队统一 AI 入口，负责容器部署、上游账号与 API Key 分组、兼容端点配置、健康检查和客户端接入。</p>
+          <p><strong>落地与维护：</strong>跟进部署升级、账号接入和调用异常，整理迁移与使用文档，支持 Codex / Claude 等客户端接入，减少团队重复配置成本。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-skills">
+          <div class="project-head">
+            <h3 id="project-skills">05　AI Skill 与研发平台</h3>
+            <time>2026.02-至今</time>
+          </div>
+          <div class="project-type">自研工程平台 · Skill 注册 / 自然语言路由 / 运行时输入 / Bugbook</div>
+          <p><strong>目标与架构：</strong>把研发、打包与问题定位经验沉淀为可执行工作流；设计 Skill 目录、项目配置、自然语言任务路由和运行时输入，分离可复用源码与凭据 / 私有状态。</p>
+          <p><strong>推进与落地：</strong>建设小程序模板、Android / iOS 发布和静态站点工作流，建立根因、修复与验证记录的复用机制，使跨项目交付有统一入口和检查依据。</p>
+        </section>
+      </div>
+
+      <section aria-labelledby="matrix-title">
+        <h2 class="section-title" id="matrix-title">近期项目矩阵 <span class="section-note">独立产品与应用 · 前端架构、核心开发与交付推进</span></h2>
+        <div class="matrix-grid">
+          <table class="matrix">
+            <caption>用户产品与多端应用</caption>
+            <thead><tr><th scope="col">产品 / 技术栈</th><th scope="col">负责人工作</th></tr></thead>
+            <tbody>
+              <tr><td>轻灵灵工协作多端<small>uni-app / Vue 3 / Pinia</small></td><td>技术选型与架构；核心研发、联调及发布</td></tr>
+              <tr><td>WiseMatch 校园多端<small>uni-app / Vue 3 / Pinia</small></td><td>学生 / 学校双入口；成长任务、面试及报告</td></tr>
+              <tr><td>WiseMatch 综合平台<small>Vue 3 / uni-app / UTS / RTC</small></td><td>网站与多端架构、求职招聘、AI 交互及 App 发布</td></tr>
+              <tr><td>Wise AI · 红娘与语音陪伴<small>uni-app / ASR / SSE</small></td><td>匹配与性格测评；语音会话、资料及服务流程</td></tr>
+            </tbody>
+          </table>
+          <table class="matrix">
+            <caption>企业、运营与招聘工具</caption>
+            <thead><tr><th scope="col">产品 / 技术栈</th><th scope="col">负责人工作 / 接入协作</th></tr></thead>
+            <tbody>
+              <tr><td>灵小聘 AI 招聘平台<small>Vue 3 / Ant Design Vue</small></td><td>招聘助手、人设、企业知识库及岗位 / 人才管理</td></tr>
+              <tr><td>灵小聘本地招聘工具<small>Python / FastAPI / Patchright</small></td><td>Web 与本地招聘自动化服务联动、任务状态接入</td></tr>
+              <tr><td>校园就业管理平台<small>Vue 3 / Element Plus / ECharts</small></td><td>就业驾驶舱、成长辅导、预警与院校权限</td></tr>
+              <tr><td>WiseMatch 平台运营后台<small>Vue 3 / Element Plus</small></td><td>租户、会员与用户运营；岗位、AI 任务调度</td></tr>
+              <tr><td>轻灵运营管理后台<small>React / Arco / TanStack Query</small></td><td>管理端架构、权限与运营模块交付</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="matrix-tools"><strong>配套工程能力：</strong>pnpm Monorepo、TanStack Query / Zod、Vitest、UTS / HBuilderX；AI 中转与AI Skill 支撑模型接入、项目配置及多端发布。</p>
+      </section>
+
+      <footer class="page-footer"><span>杨友超 · 前端项目负责人</span><span>02 / 03</span></footer>
+    </article>
+
+    <article class="page" id="resume-saas" aria-label="杨友超简历第三页">
+      <header class="page-heading"><h2>门店 SaaS 与多端系统建设</h2><span>非球阶段 · 2022.10-2025.11</span></header>
+      <p class="page-intro">前端项目负责人，围绕门店经营持续建设管理、收银和用户服务系统，负责架构、核心开发、接口联调与多端迭代。</p>
+
+      <div class="project-list">
+        <section class="project" aria-labelledby="project-taimanman">
+          <div class="project-head"><h3 id="project-taimanman">台满满球房门店数字化平台</h3><time>2024.08-2025.11</time></div>
+          <div class="project-type">前端项目负责人 · uni-app / Vue 3 / TypeScript / Element Plus</div>
+          <p><strong>项目目标与范围：</strong>为球房门店建设经营与用户服务系统，覆盖企业管理小程序、消费者小程序、横屏收银、运营后台和客服 H5。</p>
+          <p><strong>架构与 0-1：</strong>按门店、订单、商品、会员、台桌和权限拆分模块，统一请求、状态、环境存储、路由与业务组件；负责各端核心功能开发和前后端联调。</p>
+          <p><strong>核心业务与难点：</strong>串联台桌计费、开台 / 换桌 / 暂停、商品点单、助教服务、折扣、挂账、预付、退款和结账；跟进库存联动、订单日志、人员权限与跨端数据一致性。</p>
+          <p><strong>官网建设：</strong>负责台满满官网的前端架构、页面与组件开发、多端适配及发布跟进，承接品牌与产品对外展示。</p>
+          <p><strong>交付成果：</strong>建设从门店经营、商品库存、支付结算到报表统计和会员运营的前端业务闭环，接入 OSS、二维码、微信支付、Excel 导出和图表，持续维护多端构建与发布配置。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-feiqiu">
+          <div class="project-head"><h3 id="project-feiqiu">非球 SaaS 与多端球房管理平台</h3><time>2022.10-2024.07</time></div>
+          <div class="project-type">前端项目负责人 · Vue 2 / 3 / uni-app / Pinia / Element UI &amp; Plus</div>
+          <p><strong>项目目标与范围：</strong>面向桌球俱乐部的收银 SaaS、管理后台、球房管理与用户小程序，覆盖门店、人员、库存、设备、订单和会员服务。</p>
+          <p><strong>架构与开发：</strong>负责管理及用户小程序建设，开发后台与收银模块，封装请求、状态和环境存储；实现商品、库存、助教、台桌、营销、设备和人员管理，建设多角色权限与门店数据同步。</p>
+          <p><strong>交付与规模：</strong>支持现金、离线、扫码枪、Web 与平板收银，接入 OSS 图片管理、微信支付与小程序分包；项目服务 KK、UK 等球房品牌，覆盖约 700 家门店、50,000 名员工及 10 余种角色管理场景。</p>
+        </section>
+
+        <section class="project" aria-labelledby="project-early-ai">
+          <div class="project-head"><h3 id="project-early-ai">H5 流式 AI 文生文应用</h3><time>2024.08-2025.11</time></div>
+          <div class="project-type">台满满阶段 · 早期 AI 应用实践 · H5 / 流式响应</div>
+          <p><strong>目标与实现：</strong>负责 H5 文生文功能，将用户输入、流式生成、生成中状态、结果展示与异常反馈串成完整交互，积累 AI 内容生成的产品接入经验。</p>
+          <p><strong>研发探索：</strong>自 2024.10 起持续使用 AI 编程工具辅助开发，配置 Coze 工作流、开展 MCP 方案对接交流，逐步把 AI 辅助开发经验沉淀到后续的AI Skill 与研发平台建设。</p>
+        </section>
+      </div>
+
+      <div class="result-line">项目积累：多角色门店经营 · 收银与支付结算 · 订单 / 库存联动 · 多端持续交付</div>
+
+      <section class="education-section" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title">教育经历</h2>
+        <div class="education"><strong>北京语言大学网络教育学院</strong><span>大专 · 汉语言文学</span><span>2021-2024</span></div>
+      </section>
+
+      <div class="contact-bottom" aria-label="联系方式"><span><strong>电话</strong>　<a href="tel:18336261273">18336261273</a></span><span><strong>邮箱</strong>　<a href="mailto:skill199911@163.com">skill199911@163.com</a></span><span><strong>期望城市</strong>　杭州</span></div>
+      <footer class="page-footer"><span>杨友超 · 前端项目负责人</span><span>03 / 03</span></footer>
+    </article>
+  </main>
+  <script>
+    document.querySelector('[data-print]').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
